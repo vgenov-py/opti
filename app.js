@@ -10,6 +10,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
+app.get('/signup', (req, res) => {
+    console.log(req.originalUrl);
+    res.sendFile(path.join(__dirname, 'public/signup.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
